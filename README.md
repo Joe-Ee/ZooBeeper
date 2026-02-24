@@ -1,2 +1,5 @@
 # ZooBeeper
-Animal tracking application
+Animal tracking application for animal sanctuaries 
+
+ - Flask application
+ - MongoDB
