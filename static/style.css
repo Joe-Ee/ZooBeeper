@@ -1,0 +1,287 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff; /* primary */
+    color: #000000;            /* text */
+    text-align: center;
+}
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+.topnav {
+    background-color: #838181;
+    overflow: hidden;
+    height: 25%;
+    font-size: 150%;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav img {
+    float: left;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #f5b8ff;
+    color: #000000;
+}
+
+/* =========================
+   HEADER / ACCOUNT
+========================= */
+.account-header {
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.top {
+    margin: auto;
+    text-align: center;
+}
+
+.settings-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f5b8ff;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.settings-btn:hover {
+    opacity: 0.85;
+}
+
+/* =========================
+   MAIN ACCOUNT SECTION
+========================= */
+.account-main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 24px;
+}
+
+.search {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search input[type="text"]:focus {
+    border-color: #f5b8ff;
+}
+
+.search button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f5b8ff;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search button:hover {
+    background-color: #d162e2;
+}
+
+/* =========================
+   ANIMAL GRID
+========================= */
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    gap: 12px;
+    padding: 12px;
+    justify-content: center;
+}
+
+.animalMini {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    background: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.animal-image img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    background: #ffffff;
+}
+
+/* =========================
+   IMAGE STYLING
+========================= */
+.bird-image {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    margin: 1.5rem auto;
+    display: block;
+    border-radius: 8px;
+    border: 3px solid #f5b8ff;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1,
+h2 {
+    color: #000000;
+}
+
+h2 {
+    margin: 2rem 0 1rem;
+    border-bottom: 2px solid #f5b8ff;
+    display: inline-block;
+}
+
+/* =========================
+   TABLES
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem auto;
+    background-color: #ffffff;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    color: #000000;
+}
+
+/* Info Table */
+.info-table th {
+    background-color: #f5f5f5;
+}
+
+.info-table th,
+.info-table td {
+    border-bottom: 1px solid #000000;
+}
+
+/* Medicine Table */
+.medicine-table {
+    border: 2px solid #000000;
+}
+
+.medicine-table th {
+    background-color: #f5f5f5;
+}
+
+.medicine-table th,
+.medicine-table td {
+    border: 2px solid #000000;
+}
+
+/* =========================
+   SUMMARY BLOCK
+========================= */
+.summary-block {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: #f5b8ff;
+    color: black;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #eb98f8;
+}

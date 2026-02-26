@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<header class="account">
+    {% include "components/header.html" %}
+
+    <div class="account-header">
+        <h1>Bird Name</h1>
+        <button class="settings-btn">Edit</button>
+    </div>
+</header>
+
+<main class="account-main">
+    <img class="bird-image" src="../static/assets/Bord.jpg">
+
+    <h2>Necessary Info</h2>
+    <table class="info-table">
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Medical Conditions</th>
+                <th>Location (Aviary)</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Webby</td>
+                <td>Idk</td>
+                <td>Big one in the back</td>
+                <td>This one is black in color and seems to be a pigeon</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Summary</h2>
+    <p class="summary-block">
+        Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente expedita cupiditate fugit neque magnam praesentium inventore, aut natus quam cum esse aliquam, odio itaque unde cumque consequuntur! Fuga, aspernatur consequuntur!
+
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt maiores qui neque modi numquam quas suscipit sunt maxime cumque voluptatem? Dignissimos nihil amet exercitationem hic corporis? Voluptatum doloribus cum quod.
+    </p>
+
+    <table class="medicine-table">
+        <thead>
+            <tr>
+                <th>Medicine</th>
+                <th>Dose</th>
+                <th>Schedule</th>
+                <th>Last Given</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fake Med</td>
+                <td>1.2 Mg</td>
+                <td>Tuesday and Thursday</td>
+                <td>2/5/2026</td>
+            </tr>
+            <tr>
+                <td>Med2</td>
+                <td>.2 Mg</td>
+                <td>Monday Wednesday Friday</td>
+                <td>2/4/2026</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

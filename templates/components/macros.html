@@ -1,0 +1,12 @@
+{% macro animal(name, image, age, description) %}
+<div class="animalMini">
+    <h2>{{ name }}</h2>
+
+    <div class="animal-image">
+        <img src="{{ url_for('static', filename='assets/' ~ image)}}"alt="{{ name }}">
+    </div>
+
+    <p>Age: {{ age }}</p>
+    <p>{{ description }}</p>
+</div>
+{% endmacro %}

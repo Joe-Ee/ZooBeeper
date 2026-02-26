@@ -1,0 +1,32 @@
+{% import "components/macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include "components/header.html" %}
+    <br><br>
+      <div class="top-bar">
+        <div class="search">
+            <input type="text" placeholder="Filter Animals">
+            <button type="submit">Search</button>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="animal-grid">
+      {{ macros.animal("test", "Bord.jpg", "1", "desc") }}
+      <a href="pased in value">{{ macros.animal("username", "poop.png", "1", "desc") }}</a>
+            {{ macros.animal("test", "Bord.jpg", "1", "desc") }}
+      {{ macros.animal("test", "Bord.jpg", "1", "desc") }}
+
+     
+      </div>
+   <p>Maybe a list of my bords here</p>
+</body>
+</html>

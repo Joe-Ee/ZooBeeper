@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<header class="account">
+    {% include "components/header.html" %}
+
+    <div class="account-header">
+        <h1>Bird Name</h1>
+        <button class="settings-btn">Edit</button>
+    </div>
+</header>
+
+<div class="form-container">
+    <h2>Animal Information</h2>
+
+    <form action="/submit" method="POST">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="0" required>
+
+        <label for="conditions">Medical Conditions</label>
+        <textarea id="conditions" name="conditions" rows="3"></textarea>
+
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location">
+
+        <label for="summary">Summary</label>
+        <textarea id="summary" name="summary" rows="3"></textarea>
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+<h2> Medical Info</h2>
+        <label for="medicines">Medicines</label>
+        <textarea id="medicines" name="medicines" rows="2" placeholder="List medicines separated by commas"></textarea>
+
+        <label for="doses">Doses</label>
+        <textarea id="doses" name="doses" rows="2" placeholder="Example: 5mg, 10mg"></textarea>
+
+        <label for="schedule">Schedule</label>
+        <textarea  id="schedule" name="schedule" rows="2" placeholder="Example: Twice daily, Morning only"></textarea>
+
+        <label for="last_given">Last Time Medicine Given</label>
+       <textarea  id="last_given" name="last_given" rows="2" placeholder="Example: Tuesday March 1"></textarea>
+
+
+        <button type="submit" class = "submit-button">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
